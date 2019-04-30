@@ -33,8 +33,10 @@ or a name of the session, in which case that session is killed.
 \(fn &optional WHICH)" t nil)
 
 (autoload 'sesman-info "sesman" "\
-Display linked sessions info.
-When ALL is non-nil, show info for all sessions.
+Display info for all current sessions (`sesman-current-sessions').
+In the resulting minibuffer display linked sessions are numbered and the
+other (friendly) sessions are not. When ALL is non-nil, show info for all
+sessions.
 
 \(fn &optional ALL)" t nil)
 
@@ -71,6 +73,7 @@ buffer.
 Break any of the previously created links.
 
 \(fn)" t nil)
+ (autoload 'sesman-map "sesman" "Session management prefix keymap." t 'keymap)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "sesman" '("sesman-")))
 
