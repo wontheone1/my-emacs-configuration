@@ -155,3 +155,6 @@
 
 ;; use company-mode in all buffers
  (add-hook 'after-init-hook 'global-company-mode)
+
+ ; use M-TAB, a.k.a. C-M-i, as manual trigger for company-complete
+(global-set-key (kbd "M-TAB") #'company-complete)
