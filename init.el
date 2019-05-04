@@ -156,5 +156,13 @@
 ;; use company-mode in all buffers
  (add-hook 'after-init-hook 'global-company-mode)
 
- ; use M-TAB, a.k.a. C-M-i, as manual trigger for company-complete
+;; use M-TAB, a.k.a. C-M-i, as manual trigger for company-complete
 (global-set-key (kbd "M-TAB") #'company-complete)
+
+;; To make TAB complete, without losing the ability to manually indent
+(global-set-key (kbd "TAB") #'company-indent-or-complete-common)
+
+;; Sometimes, you don't know the exact prefix for the item you want to type.
+;;In this case, you can get CIDER-specific "fuzzy completion" by adding:
+(add-hook 'cider-repl-mode-hook #'cider-company-enable-fuzzy-completion)
+(add-hook 'cider-mode-hook #'cider-company-enable-fuzzy-completion)
