@@ -173,3 +173,7 @@
 (ido-mode 1)
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
+
+;; Hiding the splash screen and banner
+(setq inhibit-startup-message t
+inhibit-startup-echo-area-message t)
