@@ -177,3 +177,7 @@
 ;; Hiding the splash screen and banner
 (setq inhibit-startup-message t
 inhibit-startup-echo-area-message t)
+
+;; Enable up/down case region
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
