@@ -181,3 +181,6 @@ inhibit-startup-echo-area-message t)
 ;; Enable up/down case region
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
+
+;; Making Emacs Auto Indent with return key
+(define-key global-map (kbd "RET") 'newline-and-indent)
